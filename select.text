@@ -1,0 +1,35 @@
+Select is the most common statement used, and it allows us to retrive information 
+from a table
+
+Syntax
+->To select single column from table
+SELECT column_name1, FROM table_Name;
+Example
+SELECT first_name FROM actor;
+
+->To select multiple column from table
+SELECT column_name1, column_name2, ...  FROM table_Name;
+Example
+SELECT first_name, last_name FROM actor;
+
+
+->To select all columns from table
+SELECT * FROM table_Name;
+Example
+SELECT * FROM actor;
+
+-> In general it is not good practice to use an asterisk (*) in the SELECT statement 
+if you don't really need all columns.
+
+-> It will automatically query everything, which increase traffic between the database 
+server and the application, which can slow down the retrival of results.
+
+-> If you only need certain columns, do your best to only query for those columns.
+
+
+
+Que 1:- Use a SELECT statement to grab the first and last names of every customer and 
+their email address.
+
+Sol:- SELECT first_name,last_name,email FROM customer;
+
