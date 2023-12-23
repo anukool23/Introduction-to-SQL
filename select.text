@@ -33,3 +33,38 @@ their email address.
 
 Sol:- SELECT first_name,last_name,email FROM customer;
 
+
+
+SELECT DISTINCT
+Sometimes a table contains a column that has duplicate values, and you may find 
+yourself in a situation where you only want to list unique/distinct values.
+
+The DISTINCT keyword can be used to return only distinct values in a column.
+
+The DISTINCT keyword operates on a column. 
+
+The syntax looks like-
+SELECT DISTINCT column_name FROM table_Name
+
+or
+
+SELECT DISTINCT(column_name) FROM table_Name
+
+SELECT DISTINCT release_year FROM film;
+SELECT DISTINCT(release_year) FROM film;
+
+
+COUNT
+-> The COUNT function returns the number of input rows that match a specific condition 
+of a query.
+
+-> We can apply COUNT on a specific column or just pass COUNT(*) , we will find this 
+should return the same result.
+
+Syntax
+SELECT COUNT(name) FROM table
+
+SELECT COUNT(choice) FROM draw.
+
+Challenge:- Imagine we wanted to know: How many unique names are there in the table?
+SELECT COUNT(DISTINCT name) FROM table;
