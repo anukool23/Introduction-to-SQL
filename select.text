@@ -1,3 +1,4 @@
+SELECT
 Select is the most common statement used, and it allows us to retrive information 
 from a table
 
@@ -33,7 +34,7 @@ their email address.
 
 Sol:- SELECT first_name,last_name,email FROM customer;
 
-
+----------------------------------------------------------------------------------------
 
 SELECT DISTINCT
 Sometimes a table contains a column that has duplicate values, and you may find 
@@ -68,3 +69,41 @@ SELECT COUNT(choice) FROM draw.
 
 Challenge:- Imagine we wanted to know: How many unique names are there in the table?
 SELECT COUNT(DISTINCT name) FROM table;
+
+----------------------------------------------------------------------------------
+
+SELECT WHERE
+
+-> SELECT and WHERE are the most fundamental SQL statements and you will find yourself using them often!
+
+-> The WHERE statement allows us to specify conditions on columns for the rows to be returned.
+
+Syntax
+SELECT column1, column2 FROM table WHERE conditions;
+
+-> The WHERE clause appears immeidately after the FROM clause of the SSELECT statement.
+
+-> The conditions are used to filter the rows returned from the SELECT statement.
+
+Example
+Que:- Display name and choice whose name is David from table
+SELECT name,choice FROM table WHERE name='David';
+
+Que:- Display name and choice whose name is David and choice is red from table
+SELECT name, choice FROM table WHERE name='David' AND choice="Red';
+
+Que:- Display all columns from film table where the following conditions met
+1. rental_rate greater than 4
+2. replacement_cost is greeater than or equal to 19.99
+3. rating is R.
+
+SELECT * FROM film WHERE rental_rate=4 AND replacement_cost >= 19.99 AND rating='R'
+
+Que:- Display count from film table where the following conditions met
+1. rental_rate greater than 4
+2. replacement_cost is greeater than or equal to 19.99
+3. rating is R.
+
+SELECT COUNT(*) FROM film WHERE rental_rate=4 AND replacement_cost >= 19.99 AND rating='R'
+
+
